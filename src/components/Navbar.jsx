@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
             <img 
-              src="/assets/logos/logo192.png"
+              src="/assets/logos/Aglivo Logo(large).png"
               alt="Aglivo Logo"
               className="h-12 w-auto object-contain"
               onError={(e) => {

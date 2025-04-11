@@ -1,4 +1,4 @@
-// File: /Users/macbookpro/Desktop/aglivo-web-design/src/app/page.jsx
+// File: /Users/macbookpro/Desktop/aglivo-web-design/src/app/page.js
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,6 +1,16 @@
 'use client';
 
 import React, { useState } from 'react';
+import TextDisplay from './TextDisplay';
+import EmailForm from './EmailForm';
+
+const services = [
+  "UI/UX Designing",
+  "Software Development",
+  "Consultation",
+  "Digital Marketing",
+  "Content Creation"
+];
 
 const Hero = () => {
   const [email, setEmail] = useState('');
@@ -12,13 +22,20 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <div 
+      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: 'url(/assets/logos/waves.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       {/* Wave animation background */}
       <div className="wave-animation"></div>
       
       <div className="container mx-auto px-4 z-10 relative">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             <span className="block mb-4">Your Vision</span>
             <span className="bg-white text-black px-4 py-1 inline-block mb-4">Our Creative</span>
             <div className="flex items-center justify-center space-x-2">
@@ -35,24 +52,11 @@ const Hero = () => {
             design, and UI/UX solutions to make the most impact.
           </p>
           
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex gap-2">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-full bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white"
-                required
-              />
-              <button
-                type="submit"
-                className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-6 py-3 font-medium"
-              >
-                Get Free Trial
-              </button>
-            </div>
-          </form>
+          <EmailForm />
+          
+          <div className="mt-32">
+            <TextDisplay items={services} />
+          </div>
           
           <div className="mt-16 animate-bounce">
             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mx-auto">

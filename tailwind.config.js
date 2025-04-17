@@ -7,9 +7,6 @@ module.exports = {
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
 		"./src/**/*.{js,jsx}",
-		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	prefix: "",
 	theme: {
@@ -21,6 +18,9 @@ module.exports = {
 			}
 		},
 		extend: {
+			borderColor: {
+				DEFAULT: 'hsl(var(--border))',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -63,6 +63,10 @@ module.exports = {
 				}
 			},
 			keyframes: {
+				marquee3: {
+					'0%':   { transform: 'translateX(0%)' },
+					'100%': { transform: 'translateX(-33.333%)' },
+				  },
 				'accordion-down': {
 					from: { height: '0' },
 					to: { height: 'var(--radix-accordion-content-height)' }
@@ -79,18 +83,22 @@ module.exports = {
 					'0%': { transform: 'translateX(0)' },
 					'100%': { transform: 'translateX(-50%)' }
 				},
-				'fade-in': {
-					'0%': { opacity: '0', transform: 'translateY(20px)' },
-					'100%': { opacity: '1', transform: 'translateY(0)' },
+				'slide-up': {
+					'0%': { transform: 'translateY(100%)', opacity: 0 },
+					'100%': { transform: 'translateY(0)', opacity: 1 },
 				},
 			},
 			animation: {
+				'marquee-3': 'marquee3 15s linear infinite',
+				'slide-up': 'slide-up 0.8s ease-out forwards',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'wave': 'wave 15s linear infinite',
-				'fade-in': 'fade-in 0.5s ease-out forwards',
-			}
+				'wave': 'wave 15s linear infinite'
+			},
+			fontFamily: {
+				montserrat: ['Montserrat', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

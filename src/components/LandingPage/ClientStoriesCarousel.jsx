@@ -53,10 +53,7 @@ const ClientStoriesCarousel = () => {
     }
     return 3;
   };
-
   const maxSlides = Math.max(0, clientReviews.length - getVisibleCards());
-
-  // Auto-scroll carousel every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
@@ -83,8 +80,6 @@ const ClientStoriesCarousel = () => {
     const newIndex = Math.max(0, currentSlide - 1);
     handleScrollTo(newIndex);
   };
-
-  // Touch event handlers for mobile swipe
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -104,7 +99,6 @@ const ClientStoriesCarousel = () => {
 
   return (
     <div className="relative w-full overflow-x-hidden bg-white font-['Montserrat'] py-0 pt-8 px-4">
-      {/* Background logo */}
       <div className="absolute -top-20 -right-20 opacity-50 pointer-events-none select-none z-0">
         <img 
           src="/assets/logos/Logogrey.png" 
@@ -114,10 +108,7 @@ const ClientStoriesCarousel = () => {
           className="transform rotate-[-7deg]" 
         />
       </div>
-
-      {/* Main content */}
       <div className="relative z-10 max-w-[1590px] mx-auto">
-        {/* Section Heading */}
         <div className="text-center mb-8">
           <h3 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold tracking-wider text-black uppercase mb-1 leading-tight">
             SUCCESS STORIES
@@ -129,8 +120,6 @@ const ClientStoriesCarousel = () => {
             Welcome to Aglivo, a community strength and conditioning facility that began in 2019.
           </p>
         </div>
-
-        {/* Carousel Section */}
         <div className="overflow-hidden">
           <div
             ref={carouselRef}
@@ -174,8 +163,6 @@ const ClientStoriesCarousel = () => {
               </div>
             ))}
           </div>
-
-          {/* Navigation dots */}
           <div className="flex justify-center mt-6 gap-2">
             {Array.from({ length: maxSlides + 1 }).map((_, index) => (
               <button
@@ -186,25 +173,10 @@ const ClientStoriesCarousel = () => {
             ))}
           </div>
         </div>
-
-        {/* Responsive black divider */}
         <div className="-mx-4">
         <div
-          className="
-            w-screen
-            left-0
-            relative
-            bg-black
-            mt-8
-            h-4     /* mobile */
-            sm:h-6  /* ≥640px */
-            md:h-8  /* ≥768px */
-            lg:h-10 /* ≥1024px */
-          "
-        />
+          className="w-screen left-0 relative bg-black mt-8 h-4 sm:h-6 md:h-8 lg:h-10"/>
         </div>
-
-        {/* Responsive map image */}
         <div className="-mx-4">
         <div className="w-screen left-0 relative">
         <img
@@ -212,16 +184,7 @@ const ClientStoriesCarousel = () => {
           alt="Location Map"
           width={1921}
           height={643}
-          className="
-            block
-            w-full
-            h-auto
-            max-h-[200px]    /* mobile cap */
-            sm:max-h-[300px] /* ≥640px */
-            md:max-h-[400px] /* ≥768px */
-            lg:max-h-[600px] /* ≥1024px */
-          "
-        />
+          className="block w-full h-auto max-h-[200px] sm:max-h-[300px] md:max-h-[400px] lg:max-h-[600px]"/>
         </div>
       </div>
       </div>

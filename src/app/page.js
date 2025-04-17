@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Services from '../components/Services';
-import Aboutus from '../components/Aboutus';
-import TrustedPartners from '../components/TrustedPartners';
-import CoreValuesSection from '../components/CoreValuesSection';
-import ProjectsSection from '../components/ProjectsSection';
-import ClientStoriesCarousel from '../components/ClientStoriesCarousel';
-import ContactUs from '../components/ContactUs';
-import Footer from '../components/Footer';
+import Navbar from '../components/LandingPage/Navbar';
+import Hero from '../components/LandingPage/Hero';
+import Services from '../components/LandingPage/Services';
+import Aboutus from '../components/LandingPage/Aboutus';
+import TrustedPartners from '../components/LandingPage/TrustedPartners';
+import CoreValuesSection from '../components/LandingPage/CoreValuesSection';
+import ProjectsSection from '../components/LandingPage/ProjectsSection';
+import ClientStoriesCarousel from '../components/LandingPage/ClientStoriesCarousel';
+import ContactUs from '../components/LandingPage/ContactUs';
+import Footer from '../components/LandingPage/Footer';
 
 export default function Home() {
   return (

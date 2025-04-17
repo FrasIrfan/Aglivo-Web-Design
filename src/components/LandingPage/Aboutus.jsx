@@ -29,8 +29,6 @@ const AboutUs = () => {
                 From Upwork Developers to Industry Innovators
               </h2>
             </div>
-            
-            {/* Replaced the <p> tag with a <div> */}
             <div className="text-lg leading-relaxed text-gray-800 mb-10">
               Aglivo was founded by two passionate entrepreneurs who began their
               journey as developers on Upwork in 2019. Over time, they grew their

@@ -7,15 +7,11 @@ const Hero = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Email submitted:', email);
-    // Add your email submission logic here
   };
 
   return (
     <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Wave animation background */}
       <div className="wave-animation"></div>
-      
       <div className="container mx-auto px-4 z-10 relative">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">
@@ -29,12 +25,10 @@ const Hero = () => {
               <span>Custom Solution</span>
             </div>
           </h1>
-          
           <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
             We are extensive experience and a strong team & We deliver creative branding, web
             design, and UI/UX solutions to make the most impact.
           </p>
-          
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
             <div className="flex gap-2">
               <input
@@ -53,7 +47,7 @@ const Hero = () => {
               </button>
             </div>
           </form>
-          
+
           <div className="mt-16 animate-bounce">
             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mx-auto">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">

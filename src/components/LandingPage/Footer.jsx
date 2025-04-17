@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react'
 import Image from 'next/image'
 
@@ -6,21 +6,17 @@ const Footer = () => {
   return (
     <footer className="w-full bg-white text-black font-[Montserrat] overflow-x-hidden">
       <div className="container mx-auto px-4 py-8">
-        {/* Top Section: Left side logo & social icons; Right side grouped sections */}
         <div className="flex flex-col md:flex-row justify-between gap-8">
-          {/* LEFT SIDE: Logo & Social Icons */}
           <div className="flex flex-col items-start space-y-4 ">
-            {/* Logo */}
             <div className="flex-shrink-0 mb-28 ml-10 mt-5">
               <Image
                 src="/assets/logos/footerlogo.png"
                 alt="Footer Logo"
-                width={150} // Adjusted size for balance
+                width={150} 
                 height={150}
                 priority
               />
             </div>
-            {/* Social Icons */}
             <div className="flex items-center space-x-3 mt-10 ml-10">
               <a href="#facebook" aria-label="Facebook">
                 <Image
@@ -51,12 +47,8 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
-          {/* RIGHT SIDE: Grouped sections */}
           <div className="flex flex-col gap-10 w-full md:w-auto">
-            {/* Top group: Grid with three sections */}
             <div className="grid grid-cols-3 gap-8">
-              {/* Services */}
               <div>
                 <h3 className="text-base font-semibold mb-3">Services</h3>
                 <ul className="text-xs space-y-1">
@@ -66,7 +58,6 @@ const Footer = () => {
                   <li>Digital Marketing</li>
                 </ul>
               </div>
-              {/* Company */}
               <div>
                 <h3 className="text-base font-semibold mb-3">Company</h3>
                 <ul className="text-xs space-y-1">
@@ -76,7 +67,6 @@ const Footer = () => {
                   <li>Contact</li>
                 </ul>
               </div>
-              {/* Follow Us */}
               <div>
                 <h3 className="text-base font-semibold mb-3">Follow Us</h3>
                 <ul className="text-xs space-y-1">
@@ -86,8 +76,6 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-
-            {/* KEEP IN TOUCH SECTION: positioned immediately below the grid above */}
             <div className="mt-4">
               <h3 className="text-base font-semibold mb-3">Keep in Touch</h3>
               <p className="text-xs mb-4">
@@ -106,13 +94,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Divider with side margins */}
         <div className="mt-10">
           <hr className="w-11/12 mx-auto border-t-2 border-gray-300" />
         </div>
-
-        {/* Back-to-Top Button */}
         <div className="mt-4 flex justify-center">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -124,8 +108,6 @@ const Footer = () => {
             </svg>
           </button>
         </div>
-
-        {/* Bottom Row: Copyright */}
         <div className="mt-8 text-center text-xs">
           <p>
             &copy; 2025 Eloqwnt. All rights reserved

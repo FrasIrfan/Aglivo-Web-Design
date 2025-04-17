@@ -14,7 +14,6 @@ const ProjectShowcaseSection = () => {
       tags: ["Web Design", "Web Dev"],
       number: "01",
       alignment: "right",
-      // icon: <CustomMedicalIcon className="w-8 h-8" />
     },
     {
       id: 2,
@@ -25,7 +24,6 @@ const ProjectShowcaseSection = () => {
       tags: ["Mobile Design", "Web Dev"],
       number: "02",
       alignment: "left",
-      // icon: <CustomServiceIcon className="w-8 h-8" />
     },
     {
       id: 3,
@@ -36,7 +34,6 @@ const ProjectShowcaseSection = () => {
       tags: ["Web Design", "Web Dev"],
       number: "03",
       alignment: "right",
-      // icon: <CustomDeliveryIcon className="w-8 h-8" />
     },
     {
       id: 4,
@@ -47,11 +44,10 @@ const ProjectShowcaseSection = () => {
       tags: ["Mobile Design", "Web Dev"],
       number: "04",
       alignment: "left",
-      // icon: <CustomGoalIcon className="w-8 h-8" />
     }
   ];
 
-  
+
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -98,14 +94,14 @@ const ProjectShowcaseSection = () => {
         <div className="space-y-32">
           {projects.map((project, index) => {
             const animatedText = (
-              <div 
-                ref={el => (sectionRefs.current[index] = el)} 
+              <div
+                ref={el => (sectionRefs.current[index] = el)}
                 className="flex flex-col justify-center max-w-[760px] opacity-0 transition-all duration-1500 ease-out"
                 style={{
                   transformOrigin: project.alignment === 'right' ? 'left' : 'right',
                   transform: 'translateY(30px)',
                   filter: 'blur(8px)',
-                  maxHeight: '504px' 
+                  maxHeight: '504px'
                 }}
               >
                 <div className="mb-4 text-gray-300 text-base">
@@ -126,7 +122,7 @@ const ProjectShowcaseSection = () => {
               <div className="flex items-center justify-between mt-6">
                 <div className="flex flex-wrap gap-4">
                   {project.tags.map((tag, tagIndex) => (
-                    <button 
+                    <button
                       key={tagIndex}
                       className="px-7 py-2.5 rounded-[9px] border border-white text-white font-montserrat text-sm transition-colors hover:bg-white hover:text-black"
                     >
@@ -142,9 +138,9 @@ const ProjectShowcaseSection = () => {
 
             const imageSection = (
               <div className="flex items-center justify-center relative">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
+                <img
+                  src={project.image}
+                  alt={project.title}
                   className="w-full max-w-[720px] h-auto max-h-[504px] rounded-[36px] object-cover"
                 />
               </div>

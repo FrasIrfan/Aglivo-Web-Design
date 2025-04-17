@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -42,7 +43,6 @@ export default function Card({index, title, description, logoPath, isHovered, is
           </div>
         </div>
       ) : (
-        // For non-hovered cards, render the content normally.
         <>
           <div className="w-[40px] h-[40px] mb-4">
             <Image

@@ -3,10 +3,7 @@ import React from 'react';
 const ContactUs = () => {
     return (
         <section className="w-full bg-black text-white relative overflow-visible">
-            {/* Container with relative position */}
             <div className="max-w-[1590px] mx-auto flex flex-col lg:flex-row relative">
-
-                {/* Left panel (Get In Touch) */}
                 <div className="w-full lg:w-3/5 p-8 lg:p-16 relative z-10">
                     <h2 className="text-2xl lg:text-2xl font-extrabold uppercase mb-4">
                         Get In Touch
@@ -16,7 +13,6 @@ const ContactUs = () => {
                         that began in 2019.
                     </p>
                     <ul className="space-y-8">
-                        {/* Location */}
                         <li className="flex items-start">
                             <div className="flex-shrink-0 bg-gray-800 rounded-full w-6 h-6 flex items-center justify-center mr-4">
                                 <img
@@ -30,7 +26,6 @@ const ContactUs = () => {
                                 <p className="text-sm font-semibold">Johar Town, Lahore, Pakistan</p>
                             </div>
                         </li>
-                        {/* Phone */}
                         <li className="flex items-start">
                             <div className="flex-shrink-0 bg-gray-800 rounded-full w-6 h-6 flex items-center justify-center mr-4">
                                 <img
@@ -44,7 +39,6 @@ const ContactUs = () => {
                                 <p className="text-lg font-semibold">(540) 842-1855</p>
                             </div>
                         </li>
-                        {/* Email */}
                         <li className="flex items-start">
                             <div className="flex-shrink-0 bg-gray-800 rounded-full w-6 h-6 flex items-center justify-center mr-4">
                                 <img
@@ -60,19 +54,12 @@ const ContactUs = () => {
                         </li>
                     </ul>
                 </div>
-
-                {/* Right panel (Contact Us form) 
-            Overflows horizontally by pushing out to the right 
-            and from below via negative top margin. 
-        */}
                 <div
-                    className="w-full lg:w-2/5 bg-white text-black p-2 lg:p-5 relative z-20 lg:-mt-20 mr-24 mb-20"
-                >
+                    className="w-full lg:w-2/5 bg-white text-black p-2 lg:p-5 relative z-20 lg:-mt-20 mr-24 mb-20" >
                     <h2 className="text-2xl lg:text-2xl font-extrabold uppercase mb-6 text-center ">
                         Contact Us
                     </h2>
                     <form className="space-y-6">
-                        {/* Name */}
                         <div>
                             <label htmlFor="name" className="block text-sm mb-2">
                                 Your Name
@@ -81,10 +68,8 @@ const ContactUs = () => {
                                 type="text"
                                 id="name"
                                 placeholder="Enter your name"
-                                className="w-full text-black placeholder-gray-400 px-3 py-3 border border-black radius-black "
-                            />
+                                className="w-full text-black placeholder-gray-400 px-3 py-3 border border-black radius-black " />
                         </div>
-                        {/* Email */}
                         <div>
                             <label htmlFor="email" className="block text-sm mb-2">
                                 Your Email
@@ -93,10 +78,8 @@ const ContactUs = () => {
                                 type="email"
                                 id="email"
                                 placeholder="Enter your email"
-                                className="w-full bg-white text-black placeholder-gray-400 px-3 py-3 border border-black"
-                            />
+                                className="w-full bg-white text-black placeholder-gray-400 px-3 py-3 border border-black" />
                         </div>
-                        {/* Message */}
                         <div>
                             <label htmlFor="message" className="block text-sm mb-2">
                                 Message
@@ -105,14 +88,11 @@ const ContactUs = () => {
                                 id="message"
                                 rows="5"
                                 placeholder="Typing..."
-                                className="w-full bg-white text-black placeholder-gray-400 px-3 py-3 border border-black "
-                            />
+                                className="w-full bg-white text-black placeholder-gray-400 px-3 py-3 border border-black " />
                         </div>
-                        {/* Submit */}
                         <button
                             type="submit"
-                            className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 uppercase"
-                        >
+                            className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 uppercase" >
                             Join Us
                         </button>
                     </form>

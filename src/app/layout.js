@@ -3,8 +3,8 @@ import { Montserrat } from 'next/font/google'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '600', '700'], // The weights you need for your design
-  variable: '--font-montserrat', // Optional: Define a CSS variable for custom use
+  weight: ['400', '600', '700'], 
+  variable: '--font-montserrat', 
 });
 
 export const metadata = {
@@ -15,6 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head />
       <body>
         {children}
       </body>
